@@ -1,0 +1,82 @@
+@charset "UTF-8";
+.header {
+	padding: 1em;
+	text-align: center;
+	background: #565864;
+	color: white;
+	font-size: 30px;
+}
+
+.leftmenu{
+	float: left;
+	width: 10%;
+	height: 100vh;
+	text-align: center;
+	background: #565864;
+	color: white;
+	font-size: 20px;
+}
+
+#addPlayer.h4, #addTreasure.h4{
+	align: left;
+}
+
+button{
+	border: 1px solid black;
+	font-weight: bold;
+	background-color: #255890;
+}
+
+#coins{
+	display: flex;
+	flex-direction: row;
+}
+
+#coin_amount{
+	border: 1px solid black;
+	width: 100px;
+}
+
+
+.mainbody{
+	float: right;
+	width: 85%;
+	color: black;
+	font-size: 16px;
+}
+
+h2.mainbody{
+	width: 80%;
+	text-align: left;
+	color: grey;
+	font-size: 25px;
+	}
+	
+table#trtable {
+	display: block;
+}
+
+.save {
+	display: none;
+}
+
+
+th, td {
+	padding: 5px;
+	width: 100px;
+	height: 20px;
+	border: 1px solid black;
+}
+
+#playernav{
+	float: right;
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid grey;
+	list-style: none;
+}
+
+.player{
+	padding: 5px;
+	align: right;
+}

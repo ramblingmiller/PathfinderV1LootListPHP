@@ -1,0 +1,740 @@
+Name	GPValue	Weight	Type
+Abacus	2	2	gear
+Absinthe (bottle)	30	1.5	gear
+Absinthe (glass)	3	0	gear
+Acid flask	10	1	gear
+Adamantine (1 lb.)	300	1	gear
+Air Bladder	0.1	0.5	gear
+Alchemical cartridge, dragons breath	40	0	gear
+Alchemical cartridge, entangling shot	40	0	gear
+Alchemical cartridge, flare	10	0	gear
+Alchemical cartridge, paper	12	0	gear
+Alchemical cartridge, salt shot	12	0	gear
+Alchemical Cement	5	2	gear
+Alchemical Glue	20	0.5	gear
+Alchemical Glue Accelerant	25	0	gear
+Alchemical grease	5	1	gear
+Alchemical solvent (vial)	20	0.5	gear
+Alchemists Fire	20	1	gear
+Alchemists kindness	1	0	gear
+Alchemists Kit bundle	40	24	gear
+Alchemists lab	500	40	gear
+Alchemists lab, portable	75	20	gear
+Alchemy Crafting Kit	25	50	gear
+Ale (gallon)	0.2	8	gear
+Ale (mug)	0.04	1	gear
+Alkali Flask	15	1	gear
+Allspice (1 lb.)	1	1	gear
+Amazing Lock	150	1	gear
+Animal Glue	0.5	0.5	gear
+Animal harness	2	2	gear
+Antidote Kit	100	3	gear
+Antiplague (vial)	50	0	gear
+Antitoxin	50	0.05	gear
+Anvil	5	10	gear
+Anvil (blacksmith)	5	100	gear
+Anvil (farrier)	5	50	gear
+Anvil (gold/silver smith)	5	10	gear
+Applejack (gallon)	0.4	8	gear
+Applejack (mug)	0.08	1	gear
+Area Map	50	2	gear
+Armor Ointment	30	1	gear
+Arsenic(poison)	120	0	gear
+Artisans outfit	1	4	gear
+Artisans Outfit (tear-away)	6	4	gear
+Artisans tools	5	5	gear
+Astrolabe	100	6	gear
+Average Lock	40	1	gear
+Azure Lily Pollen(poison)	1500	0	gear
+Backpack	2	2	gear
+Backpack, masterwork	50	4	gear
+Baijiu (bottle)	10	2	gear
+Balancing pole	0.8	12	gear
+Ball (10 in.)	6	1	gear
+Ball (2 in.)	0.08	0	gear
+Ball (5 in.)	0.2	0	gear
+Bandolier	0.5	0	gear
+Banner (1 color, simple symbol)	1	2	gear
+Banner (2-4 colors, complex symbol)	5	2	gear
+Banner (full coat of arms)	20	2	gear
+Banner (simple heraldic device)	12	2	gear
+Banquet (per person)	10	0	gear
+Banshee Ballerina Firework	75	0	gear
+Barbarians Kit bundle	9	26	gear
+Barbed vest	10	4	gear
+Bards Kit bundle	41	33.5	gear
+Barrel	2	30	gear
+Basil (1 lb.)	1	1	gear
+Basket	0.4	1	gear
+Beans (1 lb.)	0.02	1	gear
+Bear trap	2	10	gear
+Beaver pelt	2	2	gear
+Bedroll	0.1	5	gear
+Bell	1	0.01	gear
+Bell Net	2	2	gear
+Belladonna(poison)	100	0	gear
+Bellows	1	3	gear
+Billiards Gear	0.5	8	gear
+Bit and Bridle	2	1	gear
+Black Adder Venom(poison)	120	0	gear
+Black Lotus Extract(poison)	4500	0	gear
+Black powder (dose)	10	0	gear
+Black powder (keg)	1000	5	gear
+Black Powder dose	10	0.0166666667	gear
+Black Powder keg	1000	5	gear
+Blackfire Clay	20	10	gear
+Bladeguard	40	0	gear
+Blanket	0.2	1	gear
+Blanket, winter	0.5	3	gear
+Block and Tackle	5	5	gear
+Bloodblock	25	0	gear
+Bloodroot(poison)	100	0	gear
+Blue Book	5	1	gear
+Blue Whinnis(poison)	120	0	gear
+Board Game (advanced)	4	2	gear
+Board Game (basic)	0.5	2	gear
+Board Game (cheap)	0.1	2	gear
+Board Game (complex)	7	2	gear
+Board Game (intermediate)	1	2	gear
+Board Game (ornate)	10	2	gear
+Book of Letters	50	3	gear
+Bottle	2	0.1	gear
+Bottle of fine wine	10	1.5	gear
+Bottled Lightning	40	1	gear
+Bowling Set (average)	7	15	gear
+Bowling Set (cheap)	0.1	15	gear
+Bowling Set (common)	3	15	gear
+Bowling Set (superior)	10	15	gear
+Bread	0.02	0.5	gear
+Breakaway Chains	65	2	gear
+Bucket	0.5	2	gear
+Bufo (jug)	1	2	gear
+Bullseye Lantern	12	3	gear
+Bullseye Lantern (waterproof)	17	3	gear
+Buoy, common	0.5	16	gear
+Buoy, superior	10	30	gear
+Buoyant Balloon	10	1	gear
+Burnt Othur Fumes(poison)	2100	0	gear
+Burst Jar	35	1	gear
+Butterfly net	5	2	gear
+Cage, diminutive	10	2	gear
+Cage, fine	10	2	gear
+Cage, huge	60	960	gear
+Cage, large	30	240	gear
+Cage, medium	15	60	gear
+Cage, small	15	60	gear
+Cage, tiny	2	5	gear
+Caltrops	1	2	gear
+Camouflage Netting	20	5	gear
+Campsite Kit bundle	12	80	gear
+Candle	0.01	0.1	gear
+Candle Lamp	5	1	gear
+Candle Lamp (waterproof)	10	1	gear
+Candlerod	1	1	gear
+Candlestick	0.01	0.5	gear
+Canteen	2	1	gear
+Canvas	0.1	1	gear
+Cardamon (1 lb.)	2	1	gear
+Cards (cheap)	0.1	1	gear
+Cards (common)	5	1	gear
+Cards (masterwork)	100	1	gear
+Cards (quality)	50	1	gear
+Carriage	100	600	gear
+Cart	15	200	gear
+Case	1	0.5	gear
+Casting plaster	0.5	5	gear
+Cauim (gourd)	1	2	gear
+Caul (common)	10	0	gear
+Caul (ornate)	70	0	gear
+Caul (royal)	100	0	gear
+Caul (superior)	40	0	gear
+Cauldron	1	5	gear
+Cauldron (mithral)	1251	2.5	gear
+Cavaliers Kit bundle	23	112	gear
+Caviar	50	0.1	gear
+Ceremonial tea (cup)	0.04	0.5	gear
+Ceremonial tea set	25	5	gear
+Chain	30	2	gear
+Chalk	0.01	0.01	gear
+Chalkboard	1	2	gear
+Charcoal (20 lb.)	0.03	20	gear
+Chariot (heavy)	200	0	gear
+Chariot (light)	50	0	gear
+Chariot (medium)	100	0	gear
+Cheese (1 lb.)	0.02	1	gear
+Chest, huge	25	250	gear
+Chest, large	10	100	gear
+Chest, medium	5	50	gear
+Chest, small	2	25	gear
+Chilies (1 lb.)	2	1	gear
+Chill Cream	15	1	gear
+Chirurgeons Kit bundle	400	4	gear
+Chocolate (1 lb.)	10	1	gear
+Chocolate (bar)	5	0.5	gear
+Chroniclers Kit bundle	40	4.5	gear
+Chunk of meat	0.3	0.5	gear
+Cinnamon (1 lb.)	1	1	gear
+Citrus (1 lb.)	0.03	1	gear
+Clay	0.1	1	gear
+Cleats	5	2	gear
+Clerics Kit bundle	16	32	gear
+Clerics vestments	5	6	gear
+Clerics Vestments (tear-away)	10	6	gear
+Climbers kit	80	5	gear
+Cloves (1 lb.)	1	1	gear
+Coal (20 lb.)	0.05	20	gear
+Coffee (cup)	0.01	0.5	gear
+Coffee Beans (1 lb.)	0.05	1	gear
+Coffee Pot	3	4	gear
+Coffin (common)	10	30	gear
+Coffin (ornate)	100	50	gear
+Cold iron (1 lb.)	50	1	gear
+Cold Weather outfit	8	7	gear
+Cold Weather Outfit (tear-away)	13	7	gear
+Collapsible Bathtub	15	20	gear
+Collapsible Plank	0.4	10	gear
+Common Lamp	0.1	1	gear
+Common Lamp (waterproof)	5.1	1	gear
+Common meal (per Day)	0.3	0	gear
+Common wine (pitcher)	0.2	6	gear
+Compass	10	0.5	gear
+Cooking Kit	3	16	gear
+Copper (1 lb.)	0.5	1	gear
+Cot	1	30	gear
+Cotton (1 lb.)	8	1	gear
+Courtiers outfit	30	6	gear
+Courtiers Outfit (tear-away)	35	6	gear
+Croquet Set	0.5	10	gear
+Crossword (easy)	0.01	0	gear
+Crossword (extreme)	0.1	0	gear
+Crossword (hard)	0.07	0	gear
+Crossword (medium)	0.04	0	gear
+Crowbar	2	5	gear
+Cumin (1 lb.)	2	1	gear
+Cypher Books	150	2	gear
+Dark Reaver Powder(poison)	800	0	gear
+Darkwood (1 lb.)	10	1	gear
+Dartboard Set	0.5	10	gear
+Deathblade(poison)	1800	0	gear
+Decorative Trim (cheap)	0.1	0	gear
+Decorative Trim (common)	10	0	gear
+Decorative Trim (ornate)	35	0	gear
+Decorative Trim (royal)	50	0	gear
+Decorative Trim (superior)	22	0	gear
+Defoliant	30	0	gear
+Dice	0.1	0	gear
+Dill (1 lb.)	1	1	gear
+Disguise kit	50	8	gear
+Diving suit	10	2	gear
+Dog sled	20	300	gear
+Dominos (average)	15	1	gear
+Dominos (cheap)	0.1	1	gear
+Dominos (common)	5	1	gear
+Dominos (superior)	25	1	gear
+Dragon Bile(poison)	1500	0	gear
+Dragonslayers Kit bundle	485	64	gear
+Dragonslayers Kit bundle (w/ acid)	435	64	gear
+Drill	0.5	1	gear
+Drow(poison)	75	0	gear
+Druids Kit bundle	14	44	gear
+Dungeon Kit bundle (common)	15	25	gear
+Dungeon Kit bundle (deluxe)	130	15	gear
+Dwarven stout (mug)	0.04	0.5	gear
+Dwarven trail rations	2	1.5	gear
+Ear Trumpet	5	2	gear
+Earplugs	0.03	0	gear
+Elven trail rations	2	1	gear
+Embalming Fluid	50	10	gear
+Entertainers Kit	0.5	3	gear
+Entertainers outfit	3	4	gear
+Entertainers Outfit (tear-away)	8	4	gear
+Ermine pelt	4	0.2	gear
+Everburning torch	110	1	gear
+Exotic Military Saddle	60	40	gear
+Exotic Pack Saddle	15	20	gear
+Exotic Riding Saddle	30	30	gear
+Explorers outfit	10	8	gear
+Explorers outfit (tear-away)	15	8	gear
+Fake Footprint Shoes	5	2	gear
+Falconry Gauntlet	10	1	gear
+False Manacles	65	2	gear
+False-Bottomed Chest	52	25	gear
+False-Bottomed Cup	1	0	gear
+False-Bottomed Scabbard	45	1	gear
+Familiar Satchel	25	6	gear
+Feed	0.05	10	gear
+Fennel (1 lb.)	2	1	gear
+Fighters Kit bundle	9	29	gear
+Filter Hood	10	4	gear
+Fine wine (bottle)	10	1.5	gear
+Fire Ward Gel	150	1	gear
+Fire-resistant boots	20	2	gear
+Firewood	0.01	20	gear
+Fishhook	0.1	0.01	gear
+Fishing Kit	0.5	3	gear
+Fishing Net	4	5	gear
+Flame Fountain Firework	100	0	gear
+Flash powder	50	0	gear
+Flask	0.03	1.5	gear
+Flint and Steel	1	0.01	gear
+Flour (1 lb.)	0.02	1	gear
+Flute	5	1	gear
+Foaming Powder	10	1	gear
+Folding Chair	2	10	gear
+Folding Ladder	2	16	gear
+Folding Pole	0.2	10	gear
+Folding Table	10	20	gear
+Footprint book	50	3	gear
+Forgers Kit	200	6	gear
+Fortune cookie	0.01	0.05	gear
+Fortune-tellers deck, common	1	0.5	gear
+Fortune-tellers deck, masterwork	50	1	gear
+Fortune-tellers deck, quality	25	1	gear
+Fox pelt	3	7	gear
+Frost Ward Gel	150	1	gear
+Furs	12	5	gear
+Fuse Grenade	100	1	gear
+Galley	30000	0	gear
+Gallon of Ale	0.2	8	gear
+Gamblers Kit (cheating)	300	5	gear
+Gamblers Kit (common)	75	5	gear
+Garlic (1 lb.)	0.5	1	gear
+Gear Maintenance Kit	5	2	gear
+Ghast Retch Flask	50	1	gear
+Giant Wasp(poison)	210	0	gear
+Ginger (1 lb.)	2	1	gear
+Glass (1 lb.)	1	1	gear
+Glass Cutter	5	0.1	gear
+Glowing Ink	5	0	gear
+Glue Paper	0.1	0	gear
+Gnome trail rations	2	1	gear
+Gold (1 lb.)	50	1	gear
+Gold Holy Symbol	100	1	gear
+Gold Holy Symbol (flask)	110	1	gear
+Gold Holy Symbol (w/cmpt)	105	1	gear
+Good Lock	80	1	gear
+Good meal (per day)	0.5	2	gear
+Grappling Hook	1	4	gear
+Grappling Hook (mithral)	1001	2	gear
+Greenblood Oil(poison)	100	0	gear
+Grog (mug)	0.02	0.5	gear
+Grooming Kit	1	2	gear
+Guinea Pig	0.01	2	gear
+Gunslingers Kit bundle	26	31	gear
+Gunsmiths Kit	15	2	gear
+Haggis	0.1	1.5	gear
+Halfling trail rations	2	0.5	gear
+Hammer	0.5	2	gear
+Hammock	0.1	3	gear
+Harrow Deck	100	0	gear
+Hat (cheap)	0.1	0.5	gear
+Hat (common)	10	0.75	gear
+Hat (ornate)	35	1.5	gear
+Hat (royal)	50	2	gear
+Hat (superior)	22	1	gear
+Healers kit	50	1	gear
+Helmet Candle	2	4	gear
+Hemlock(poison)	2500	0	gear
+Hemp Rope	1	10	gear
+Hennin (common)	10	1	gear
+Hennin (ornate)	70	1	gear
+Hennin (royal)	100	1	gear
+Hennin (superior)	40	1	gear
+Heritage Book	50	2	gear
+Hip Flask	1	0.5	gear
+Hollowed Pommel	5	0	gear
+Holly and mistletoe	0.1	0.01	gear
+Holy Text (cheap)	1	1	gear
+Holy Text (masterwork church)	100	20	gear
+Holy Text (masterwork travelling)	75	4	gear
+Holy Text (superior church)	75	15	gear
+Holy Text (superior travelling)	50	3	gear
+Holy Text (typical church)	50	10	gear
+Holy Text (typical travelling)	25	2	gear
+Holy water	25	1	gear
+Honey (1 lb.)	1	1	gear
+Honey (jar)	1	0.5	gear
+Hooded Lantern	7	2	gear
+Hooded Lantern (waterproof)	12	2	gear
+Horseshoes Game	0.5	3	gear
+Hot weather outfit	8	4	gear
+Hot Weather Outfit (tear-away)	13	4	gear
+Hourglass (1 hour)	25	1	gear
+Hourglass (1 minute)	20	0.5	gear
+Hourglass (6 seconds)	10	0	gear
+Hunk of cheese	0.1	0.5	gear
+Ice cream	0.1	0	gear
+Ice skates	1	2	gear
+Id Moss(poison)	125	0	gear
+Impact Foam	25	1	gear
+Indigo Dreams(poison)	150	0	gear
+Ink	8	0.01	gear
+Inkpen	0.1	0.01	gear
+Inquisitors Kit bundle	30	34	gear
+Insanity Mist(poison)	1500	0	gear
+Invisible Ink (average)	10	0	gear
+Invisible Ink (good)	25	0	gear
+Invisible Ink (simple)	2	0	gear
+Invisible Ink (superior)	75	0	gear
+Iron (1 lb.)	0.1	1	gear
+Iron Holy Symbol	5	1	gear
+Iron Holy Symbol (flask)	15	1	gear
+Iron Holy Symbol (w/cmpt)	10	1	gear
+Iron spike	0.05	1	gear
+Iron Vial	0.1	1	gear
+Itching Powder	60	2	gear
+Journal	10	1	gear
+Jug	0.03	9	gear
+Jugglers Kit	15	10	gear
+Jungle coffee (cup)	0.03	0.5	gear
+Junk	15000	0	gear
+Kahve (cup)	0.02	0.5	gear
+Keelboat	3000	0	gear
+Keros Oil	5	0	gear
+Kilt	0.2	1	gear
+Kings Sleep(poison)	5000	0	gear
+Kite (advanced)	100	2	gear
+Kite (basic)	0.1	1	gear
+Kite (masterwork)	1000	4	gear
+Kite (ornate masterwork)	2000	5	gear
+Kite (ornate)	500	3	gear
+Kumis (wineskin)	0.5	1.5	gear
+Ladder	0.5	20	gear
+Large Scorpion Venom(poison)	200	0	gear
+Leeching kit	5	5	gear
+Lich Dust(poison)	400	0	gear
+Light detector	1	0	gear
+Linen (1 sq. yard)	4	1	gear
+Liquid Blade	40	2	gear
+Liquid Ice	40	2	gear
+Liquid ice (flask)	40	2	gear
+Loaded dice, average	10	0	gear
+Loaded dice, superior	50	0	gear
+Loaf of bread	0.02	0.5	gear
+Locksmiths tools	5	5	gear
+Longship	10000	0	gear
+Magnet	0.5	0.5	gear
+Magnifying glass	100	0.1	gear
+Maguss Kit bundle	22	31	gear
+Malyass Root Paste(poison)	250	0	gear
+Manacles	15	2	gear
+Manacles (mithral)	1000	2	gear
+Map makers kit	10	2	gear
+Maple syrup (1 lb.)	1	1	gear
+Maple syrup (jar)	1	0.5	gear
+Marble (1 lb.)	5	1	gear
+Marbles	0.1	2	gear
+Marked cards	1	0	gear
+Marker Dye	15	1	gear
+Mask (cheap)	0.1	1	gear
+Mask (common)	10	1	gear
+Mask (masterwork)	50	1	gear
+Mask (superior)	30	1	gear
+Masonry stone (1 lb.)	0.05	1	gear
+Masterwork artisans tools	55	5	gear
+Masterwork Manacles	50	2	gear
+Masterwork musical instrument	100	3	gear
+Masterwork thieves tools	100	2	gear
+Masterwork Tools	50	1	gear
+Mead (gallon)	2	8	gear
+Mead (mug)	0.05	0.5	gear
+Meat	0.3	0.5	gear
+Meditation Tea	30	0	gear
+Medium Spider Venom(poison)	150	0	gear
+Mending Paste	25	0.5	gear
+Merchants scale	2	1	gear
+Mess Kit	0.2	1	gear
+Midwifes Kit	10	2	gear
+Military Saddle	20	30	gear
+Milk	0.05	0.5	gear
+Mink pelt	3	1	gear
+Mint (1 lb.)	0.5	1	gear
+Mithral (1 lb.)	500	1	gear
+Mock Armor	90	10	gear
+Monks Kit bundle	8	22	gear
+Monks outfit	5	2	gear
+Monks Outfit (tear-away)	10	2	gear
+Monster Mask (common)	5	1	gear
+Monster Mask (superior)	10	1	gear
+Mug	0.02	1	gear
+Mug of Ale	0.04	1	gear
+Musical instrument	5	3	gear
+Mustard (1 lb.)	0.5	1	gear
+Needle	0.5	0	gear
+Nightmare Vapor(poison)	1800	0	gear
+Nitharit(poison)	650	0	gear
+Nobles outfit	75	10	gear
+Nobles Outfit (tear-away)	80	10	gear
+Nushadir (vial)	10	1	gear
+Nutmeg (1 lb.)	1	1	gear
+Nuts (1 lb.)	0.03	1	gear
+Oar	2	10	gear
+Oil	0.1	1	gear
+Oil of Taggit(poison)	90	0	gear
+Oldlaw whiskey (bottle)	20	1	gear
+Oracles Kit bundle	9	29	gear
+Orc trail rations	1	1	gear
+Oregano (1 lb.)	0.5	1	gear
+Pack Saddle	5	15	gear
+Padzahr	80	0	gear
+Paladins Kit bundle	11	30	gear
+Paper	0.4	0.01	gear
+Paper Candle Firework	1	0	gear
+Parasol	1	2	gear
+Parasol (umbrella)	2	3	gear
+Parchment	0.2	0.01	gear
+Patchwork cloak	5	0.5	gear
+Pathfinders Kit bundle	12	22	gear
+Peasants outfit	0.1	2	gear
+Peasants Outfit (tear-away)	5.1	2	gear
+Peat (20 lb.)	0.03	20	gear
+Pellet Grenade (adamantine)	150	1	gear
+Pellet Grenade (cold iron)	100	1	gear
+Pellet Grenade (iron)	50	1	gear
+Pellet Grenade (silver)	70	1	gear
+Pepper (1 lb.)	2	1	gear
+Perfume	5	0	gear
+Periscope	20	4	gear
+Pick	3	10	gear
+Pickpocket’s outfit	5	3	gear
+Pickpocket’s outfit (tear-away)	10	3	gear
+Pitcher	0.02	5	gear
+Pitcher of common wine	0.2	6	gear
+Piton	0.1	0.5	gear
+Platinum (1 lb.)	500	1	gear
+Platinum Holy Symbol	500	1	gear
+Platinum Holy Symbol (flask)	510	1	gear
+Platinum Holy Symbol (w/cmpt)	505	1	gear
+Pocketed scarf	8	0.5	gear
+Poison Pill Ring (basic ring)	25	0.01	gear
+Poison Pill Ring (signet ring)	25	0.01	gear
+Poisoned Sand Tube	1	1	gear
+Poisoning Sheath	50	1	gear
+Pole	0.2	8	gear
+Polo Gear	0.5	5	gear
+Poncho	0.5	2	gear
+Poor meal (per day)	0.1	2	gear
+Portable Altar	250	40	gear
+Portable Bridge	200	60	gear
+Portrait book	10	3	gear
+Pot	0.5	10	gear
+Pot (mithral)	1001	2	gear
+Potatoes (1 lb.)	0.02	1	gear
+Pouch	1	0.5	gear
+Powder	0.01	0.5	gear
+Powder Horn	3	1	gear
+Powdered milk	0.1	1	gear
+Prosthetic (arm)	10	3	gear
+Prosthetic (foot)	1	2	gear
+Prosthetic (hand)	1	1	gear
+Prosthetic (leg)	20	6	gear
+Pulley	2	10	gear
+Pulque (cup)	0.1	0.5	gear
+Pulque (wineskin)	0.4	2	gear
+Purple Worm(poison)	700	0	gear
+Puzzle Box (advanced, average)	250	1	gear
+Puzzle Box (advanced, common)	50	1	gear
+Puzzle Box (advanced, masterwork)	750	1	gear
+Puzzle Box (advanced, superior)	500	1	gear
+Puzzle Box (complex, average)	400	1	gear
+Puzzle Box (complex, common)	100	1	gear
+Puzzle Box (complex, masterwork)	1000	1	gear
+Puzzle Box (complex, superior)	750	1	gear
+Puzzle Box (intermediate, average)	150	1	gear
+Puzzle Box (intermediate, common)	25	1	gear
+Puzzle Box (intermediate, masterwork)	500	1	gear
+Puzzle Box (intermediate, superior)	300	1	gear
+Puzzle Box (simple, average)	75	1	gear
+Puzzle Box (simple, common)	1	1	gear
+Puzzle Box (simple, masterwork)	250	1	gear
+Puzzle Box (simple, superior)	150	1	gear
+Pyrography Kit	1	2	gear
+Quiver of Arrows (20)	1	1	gear
+Raft	0	0	gear
+Ram	10	20	gear
+Rangers Kit bundle	9	28	gear
+Rations	0.5	1	gear
+Reinforced scarf	10	1	gear
+Reversible cloak (cheap)	0.2	1	gear
+Reversible cloak (common)	10	1	gear
+Reversible cloak (ornate)	35	1	gear
+Reversible cloak (royal)	50	1	gear
+Reversible cloak (superior)	22	1	gear
+Riding Kit bundle (common)	16	54	gear
+Riding Kit bundle (common, no feed)	16	44	gear
+Riding Kit bundle (exotic mount)	36	59	gear
+Riding Kit bundle (exotic mount, no feed)	36	49	gear
+Riding Saddle	10	25	gear
+Ring	5	0.01	gear
+Rogues Kit bundle	50	37	gear
+Rope	1	10	gear
+Rope, spiders silk (50)	100	4	gear
+Rosemary (1 lb.)	1	1	gear
+Rounders Gear	0.1	0.5	gear
+Rowboat	50	100	gear
+Royal outfit	200	15	gear
+Royal Outfit (tear-away)	205	15	gear
+Rumboozle (cup)	0.1	0.5	gear
+Rusting Powder	60	0	gear
+Sack	0.1	0.5	gear
+Saddlebags	4	8	gear
+Saffron (1 lb.)	15	1	gear
+Sailing Ship	10000	0	gear
+Salt (1 lb.)	5	1	gear
+Sassone Leaf Residue(poison)	300	0	gear
+Saw	0.04	2	gear
+Scarf (cheap)	0.1	0.5	gear
+Scarf (common)	2.5	0.5	gear
+Scarf (superior)	5	0.5	gear
+Scent Cloak	20	2	gear
+Scholars outfit	5	6	gear
+Scholars Outfit (tear-away)	10	6	gear
+Scriveners Kit	2	1	gear
+Scroll Box	5	1	gear
+Scroll case	1	0.5	gear
+Seal pelt	5	10	gear
+Sealord wine (bottle)	15	0.5	gear
+Sentry Mannequin	30	35	gear
+Sextant	500	2	gear
+Shadow Essence(poison)	250	0	gear
+Shard Gel	25	1	gear
+Shaving Kit	1.5	0.5	gear
+Shield Sconce	1	0.5	gear
+Ship’s boat	500	0	gear
+Shovel	2	8	gear
+Shovel (common)	2	8	gear
+Shovel (folding)	10	12	gear
+Signal horn	1	2	gear
+Silk (1 sq. yard)	10	0.1	gear
+Silk Rope	10	5	gear
+Silver (1 lb.)	5	1	gear
+Silver Holy Symbol	25	1	gear
+Silver Holy Symbol (flask)	35	1	gear
+Silver Holy Symbol (w/cmpt)	30	1	gear
+Skeleton Key	85	0	gear
+Skillet (common)	0.8	4	gear
+Skillet (mithral)	1001	2	gear
+Skis	5	20	gear
+Skyrocket Firework	50	1	gear
+Sled	20	300	gear
+Sledge	1	10	gear
+Small Centipede(poison)	90	0	gear
+Small Steel Mirror	10	0.5	gear
+Smelling salts	25	0	gear
+Smoke pellet	25	0	gear
+Smoked goggles	10	0.1	gear
+Smokestick	20	0.5	gear
+Sneezing Powder	60	2	gear
+Sneezing powder (pouch)	60	2	gear
+Snorkel (common)	0.5	0	gear
+Snorkel (masterwork)	5	0	gear
+Snowshoes	5	4	gear
+Soap	0.5	1	gear
+Soldier’s uniform	1	5	gear
+Soldier’s uniform (tear-away)	6	5	gear
+Soothe syrup	25	0.5	gear
+Sorcerers Kit bundle	8	19	gear
+Soul Stimulant	300	0	gear
+Spade	2	8	gear
+Spell component pouch	5	2	gear
+Spelunking Kit bundle	174	32	gear
+Spyglass	1000	1	gear
+Star Candle Firework	5	0	gear
+Starfountain Firework	500	100	gear
+Stationery	1	0	gear
+Stilts (common)	0.2	10	gear
+Stilts (masterwork)	5	10	gear
+Stove Can	10	1	gear
+Street meat 	0.01	0.5	gear
+Stretcher	1	10	gear
+Striped Toadstool(poison)	180	0	gear
+Sugar (1 lb.)	0.05	1	gear
+Summoners Kit bundle	8	19	gear
+Sunrod	2	1	gear
+Surgeons Tools	20	5	gear
+Survival Kit bundle (common)	5	4	gear
+Survival Kit bundle (MW)	50	5	gear
+Swampseer(poison)	400	0	gear
+Swarmsuit	20	10	gear
+Symptom kit	25	5	gear
+Tabard	5	1	gear
+Tangleburn Bag	150	5	gear
+Tanglefoot bag	50	4	gear
+Tattoo Holy Symbol	100	0	gear
+Tea (cup)	0.02	0.5	gear
+Teapot	0.1	1	gear
+Tears of Death(poison)	6500	0	gear
+Tennis Gear	0.3	3	gear
+Tent, large	30	40	gear
+Tent, medium	15	30	gear
+Tent, pavilion	100	50	gear
+Tent, small	10	20	gear
+Tepache (cup)	0.05	0.5	gear
+Terinav Root(poison)	400	0	gear
+Thick leather (1 sq. yard)	3	6	gear
+Thieves tools	30	1	gear
+Thin leather (1 sq. yard)	0.5	2	gear
+Thunderstone	30	1	gear
+Thurible	50	3	gear
+Tindertwig	1	0.01	gear
+Tobacco (1 lb.)	0.5	1	gear
+Torch	0.01	1	gear
+Trail Rations	0.5	1	gear
+Travel cake mix	0.1	1	gear
+Travelers Dictionary	50	2	gear
+Travelers outfit	1	5	gear
+Travelers Outfit (tear-away)	6	5	gear
+Traveling Formula Book	10	1	gear
+Traveling spellbook	10	1	gear
+Troll Oil	50	1	gear
+Troll Slayers Kit bundle	3	17	gear
+Turnips (1 lb.)	0.02	1	gear
+Twitch Tonic	45	0	gear
+Undead Slayers Kit bundle	402	7	gear
+Ungol Dust(poison)	1000	0	gear
+Vanilla (1 lb.)	2	1	gear
+Vermin Repellent	5	0	gear
+Very Simple Lock	20	1	gear
+Veterinarians Kit	10	20	gear
+Vial	1	0.01	gear
+Waffle Iron (common)	1	5	gear
+Waffle Iron (mithral)	1260	2.5	gear
+Wagon (heavy)	100	0	gear
+Wagon (light)	50	0	gear
+Wagon (medium)	75	0	gear
+Wandermeal (per day)	0.01	0.5	gear
+Warship	25000	0	gear
+Water clock	1000	200	gear
+Water Purification Sponge	25	1	gear
+Waterproof Bag	0.5	0.5	gear
+Waterskin	1	4	gear
+Wax	1	1	gear
+Wax Key Blank	15	0.5	gear
+Weapon blanch, adamantine	100	0.5	gear
+Weapon blanch, cold iron	20	0.5	gear
+Weapon blanch, silver	5	0.5	gear
+Weapon cord	0.1	0	gear
+Wheat (1 lb.)	0.01	1	gear
+Whetstone	0.02	1	gear
+Whiskey (cup)	0.1	0.5	gear
+Whistle	0.8	0.01	gear
+Whistle, silent	0.9	0.01	gear
+Wig (cheap)	5	0.5	gear
+Wig (common)	100	1	gear
+Wig (ornate)	375	3	gear
+Wig (royal)	500	4	gear
+Wig (superior)	250	2	gear
+Wire	5	0.5	gear
+Wire Saw (adamantine)	150	0	gear
+Wire Saw (common)	30	0	gear
+Witchs Kit bundle	21	21	gear
+Wizards Kit bundle	21	21	gear
+Wizards spellbook	15	3	gear
+Wolfsbane(poison)	500	0	gear
+Wooden Holy Symbol	1	0.1	gear
+Wooden Holy Symbol (flask)	11	0	gear
+Wooden Holy Symbol (w/cmpt)	6	0	gear
+Wool (1 lb.)	6	1	gear
+Wrist Sheath	1	1	gear
+Wyvern(poison)	3000	0	gear
+Yogurt	0.1	0.5	gear

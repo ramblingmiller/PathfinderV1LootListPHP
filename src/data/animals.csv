@@ -1,0 +1,60 @@
+Name	GPValue	Weight	Type
+Axe Beak	1500	500	animal
+Axe Beak (combat trained)	1500	500	animal
+Axe Beak Egg	1000	10	animal
+Badger	15	20	animal
+Bat	5	1	animal
+Camel	150	1500	animal
+Cat	0.03	8	animal
+Cattle	50	1500	animal
+Chicken	1	6	animal
+Crab	20	6	animal
+Dire Bat (riding)	300	400	animal
+Dire Bat (riding, combat trained)	450	450	animal
+Dire Rat	5	50	animal
+Dog lap	15	5	animal
+Donkey	8	700	animal
+Donkey Rat	1	50	animal
+Duck	2	3	animal
+Elephant	1000	10000	animal
+Falcon	40	2	animal
+Fox	8	12	animal
+Gecko (riding)	300	1200	animal
+Gecko (riding, combat trained)	400	1500	animal
+Goat	6	50	animal
+Griffon (combat trained)	8000	500	animal
+Griffon Egg	3500	10	animal
+Hawk	18	2	animal
+Hedgehog	5	3	animal
+Hippogriff (combat trained)	5000	500	animal
+Hippogriff Egg	200	10	animal
+House Centipede	0.01	0.19	animal
+Lizard	0.05	0.13	animal
+Mastodon	2000	16000	animal
+Monkey	3	5	animal
+Mule	8	700	animal
+Octopus	25	2	animal
+Otter	20	10	animal
+Owl	10	2	animal
+Parrot	50	4	animal
+Pig	10	200	animal
+Pseudodragon	200	7	animal
+Rabbit	2	3	animal
+Raccoon	5	7	animal
+Rat	0.01	1	animal
+Raven	2	3	animal
+Scorpion greensting	15	0.56	animal
+Sheep	20	150	animal
+Skunk	10	10	animal
+Small Cat Hunting	100	100	animal
+Snake constrictor	5	60	animal
+Snake viper	5	0.63	animal
+Spider	25	0.5	animal
+Squirrel common	1	2	animal
+Squirrel flying	20	1	animal
+Stirge	20	1	animal
+Thrush	0.1	0.44	animal
+Toad	0.02	0.44	animal
+Turtle	3	4	animal
+Weasel	2	0.5	animal
+Yak	24	1000	animal

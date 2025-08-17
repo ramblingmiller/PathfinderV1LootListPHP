@@ -1,0 +1,154 @@
+Name	GPValue	Weight	Type
+Oil of Bless weapon	100	0	oil
+Oil of Darkness	300	0	oil
+Oil of Daylight	750	0	oil
+Oil of Flame arrow	750	0	oil
+Oil of Greater magic weapon +1	750	0	oil
+Oil of Greater magic weapon +2	1200	0	oil
+Oil of Greater magic weapon +3	1800	0	oil
+Oil of Greater magic weapon +4	2400	0	oil
+Oil of Greater magic weapon +5	3000	0	oil
+Oil of Invisibility	300	0	oil
+Oil of Keen edge	750	0	oil
+Oil of Levitate	300	0	oil
+Oil of Magic stone	50	0	oil
+Oil of Magic vestment +1	750	0	oil
+Oil of Magic vestment +2	1200	0	oil
+Oil of Magic vestment +3	1800	0	oil
+Oil of Magic vestment +4	2400	0	oil
+Oil of Magic vestment +5	3000	0	oil
+Oil of Magic weapon	50	0	oil
+Oil of Shillelagh	50	0	oil
+Oil of Silence	250	0	oil
+Poison Arsenic	120		poison
+Poison Azure Lily Pollen	1500		poison
+Poison Belladonna	100		poison
+Poison Black Adder Venom	120		poison
+Poison Black Lotus Extract	4500		poison
+Poison Bloodroot	100		poison
+Poison Blue Whinnis	120		poison
+Poison Burnt Othur Fumes	2100		poison
+Poison Dark Reaver Powder	800		poison
+Poison Deathblade	1800		poison
+Poison Dragon Bile	1500		poison
+Poison Drow	75		poison
+Poison Giant Wasp	210		poison
+Poison Greenblood Oil	100		poison
+Poison Hemlock	2500		poison
+Poison Id Moss	125		poison
+Poison Indigo Dreams	150		poison
+Poison Insanity Mist	1500		poison
+Poison Kings Sleep	5000		poison
+Poison Large Scorpion Venom	200		poison
+Poison Lich Dust	400		poison
+Poison Malyass Root Paste	250		poison
+Poison Medium Spider Venom	150		poison
+Poison Nightmare Vapor	1800		poison
+Poison Nitharit	650		poison
+Poison Oil of Taggit	90		poison
+Poison Purple Worm	700		poison
+Poison Sassone Leaf Residue	300		poison
+Poison Shadow Essence	250		poison
+Poison Small Centipede	90		poison
+Poison Striped Toadstool	180		poison
+Poison Swampseer	400		poison
+Poison Tears of Death	6500		poison
+Poison Terinav Root	400		poison
+Poison Ungol Dust	1000		poison
+Poison Wolfsbane	500		poison
+Poison Wyvern	3000		poison
+Potion of Aid	300	0	potion
+Potion of Barkskin +2	300	0	potion
+Potion of Barkskin +3	600	0	potion
+Potion of Barkskin +4	900	0	potion
+Potion of Barkskin +5	1200	0	potion
+Potion of Bear’s endurance	300	0	potion
+Potion of Blur	300	0	potion
+Potion of Bull’s strength	300	0	potion
+Potion of Cat’s grace	300	0	potion
+Potion of CLW	50	0	potion
+Potion of CMW	300	0	potion
+Potion of CSW	750	0	potion
+Potion of Cure light wounds	50	0	potion
+Potion of Cure moderate wounds	300	0	potion
+Potion of Cure serious wounds	750	0	potion
+Potion of Darkvision	300	0	potion
+Potion of Delay poison	300	0	potion
+Potion of Displacement	750	0	potion
+Potion of Eagle’s splendor	300	0	potion
+Potion of Endure elements	50	0	potion
+Potion of Enlarge person	50	0	potion
+Potion of Fly	750	0	potion
+Potion of Fox’s cunning	300	0	potion
+Potion of Gaseous form	750	0	potion
+Potion of Good hope	1050	0	potion
+Potion of Greater magic fang +1	750	0	potion
+Potion of Greater magic fang +2	1200	0	potion
+Potion of Greater magic fang +3	1800	0	potion
+Potion of Greater magic fang +4	2400	0	potion
+Potion of Greater magic fang +5	3000	0	potion
+Potion of Haste	750	0	potion
+Potion of Heroism	750	0	potion
+Potion of Hide from animals	50	0	potion
+Potion of Hide from undead	50	0	potion
+Potion of Inflict Light Wounds	50	0	potion
+Potion of Inflict Moderate Wounds	300	0	potion
+Potion of Inflict Serious Wounds	750	0	potion
+Potion of Invisibility	300	0	potion
+Potion of Jump	50	0	potion
+Potion of Lesser restoration	300	0	potion
+Potion of Levitate	300	0	potion
+Potion of Mage armor	50	0	potion
+Potion of Magic circle vs chaos	750	0	potion
+Potion of Magic circle vs evil	750	0	potion
+Potion of Magic circle vs good	750	0	potion
+Potion of Magic circle vs law	750	0	potion
+Potion of Magic fang	50	0	potion
+Potion of Misdirection	300	0	potion
+Potion of Neutralize poison	750	0	potion
+Potion of Nondetection	750	0	potion
+Potion of Owl’s wisdom	300	0	potion
+Potion of Pass without trace	50	0	potion
+Potion of Prot. vs arrows 10/magic	300	0	potion
+Potion of Prot. vs arrows 15/magic	1500	0	potion
+Potion of Protection from evil	50	0	potion
+Potion of Protection from good	50	0	potion
+Potion of Protection from law	50	0	potion
+Potion of Protection vs acid	750	0	potion
+Potion of Protection vs chaos	50	0	potion
+Potion of Protection vs cold	750	0	potion
+Potion of Protection vs electricity	750	0	potion
+Potion of Protection vs fire	750	0	potion
+Potion of Protection vs sonic	750	0	potion
+Potion of Rage	750	0	potion
+Potion of Reduce person	250	0	potion
+Potion of Remove blind./deafness	750	0	potion
+Potion of Remove curse	750	0	potion
+Potion of Remove disease	750	0	potion
+Potion of Remove fear	50	0	potion
+Potion of Remove paralysis	300	0	potion
+Potion of Resist acid (10)	300	0	potion
+Potion of Resist acid (20)	700	0	potion
+Potion of Resist acid (30)	1100	0	potion
+Potion of Resist cold (10)	300	0	potion
+Potion of Resist cold (20)	700	0	potion
+Potion of Resist cold (30)	1100	0	potion
+Potion of Resist electricity (10)	300	0	potion
+Potion of Resist electricity (20)	700	0	potion
+Potion of Resist electricity (30)	1100	0	potion
+Potion of Resist fire (10)	300	0	potion
+Potion of Resist fire (20)	700	0	potion
+Potion of Resist fire (30)	1100	0	potion
+Potion of Resist sonic (10)	300	0	potion
+Potion of Resist sonic (20)	700	0	potion
+Potion of Resist sonic (30)	1100	0	potion
+Potion of Sanctuary	50	0	potion
+Potion of Shield of faith +2	50	0	potion
+Potion of Shield of faith +3	300	0	potion
+Potion of Shield of faith +4	600	0	potion
+Potion of Shield of faith +5	900	0	potion
+Potion of Spider climb	300	0	potion
+Potion of Tongues	750	0	potion
+Potion of Undetectable alignment	300	0	potion
+Potion of Water breathing	750	0	potion
+Potion of Water walk	750	0	potion
