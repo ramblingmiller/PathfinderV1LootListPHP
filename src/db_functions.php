@@ -1,12 +1,7 @@
 <?php
 $csvMimes =     $csvMimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain');
 
-    }
-    else {
-        echo "<p>Connected to MySQL successfully.\n</p>";
-    }
-    return;
-}
+ 
 
 function makeDb($con, $db){
     //creates the main database if it is not already created
@@ -18,13 +13,13 @@ function makeDb($con, $db){
         
         /*database could not be selected or is not created so we'll go ahead
          * and create one and throw an error if we can't*/
-        
+
         if (!mysqli_query($con, $db_create)){
             echo "<script>alert('Error creating database')</script>";
             exit(1);
         }
         else {
-            echo "</p>Database created successfully. \n </p>";
+            echo "Database created successfully. \n";
             
         }
         
