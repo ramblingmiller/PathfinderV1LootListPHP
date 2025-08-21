@@ -104,6 +104,7 @@ function ammoTable($db_con){
     $tabName = "Ammo";
     $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
+		"value FLOAT(10,2)",
         "weight FLOAT(8,2)",
         "type VARCHAR(20)");
     
@@ -366,21 +367,25 @@ function addData2($db_con, $tabName, $file){
 
 function addPlayerData($db_con, $playerName, $charName, $charClass, $charRace, $charLvl){
     /*Adds data to the Player Table from the Add Player form*/
-    
-    //Check if the player exists
-    
-    $selectSql = "SELECT * FROM Players WHERE playerName = '".$playerName. "'";
-    $result = mysqli_query($db_con, $selectSql);
-    $row_cnt = mysqli_num_rows($result);
-    
-    if (!($row_cnt !== 0)){
- 
-        $player_sql = "INSERT INTO Players (playerName, charName, class, race, level) VALUES ('".$playerName."', '".$charName."', '".$charClass."', '".$charRace."', '".$charLvl."')";
-       
-           if (!(mysqli_query($db_con, $player_sql))){
-             echo "Error. Could not add records.\n".mysqli_error($db_con)."\n";
+
+    // Check if the player exists
+    $stmt = $db_con->prepare("SELECT 1 FROM Players WHERE playerName = ?");
+    $stmt->bind_param("s", $playerName);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows === 0) {
+        $stmt->close();
+
+        // Player does not exist, insert new record
+        $stmt = $db_con->prepare("INSERT INTO Players (playerName, charName, class, race, level) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssi", $playerName, $charName, $charClass, $charRace, $charLvl);
+
+        if (!$stmt->execute()) {
+            error_log("Error inserting player data: " . $stmt->error);
         }
     }
+    $stmt->close();
     return;
 }
 

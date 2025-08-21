@@ -1,82 +1,168 @@
-@charset "UTF-8";
+/* Modern, Streamlined Stylesheet for Pathfinder Treasure List */
+
+/* 1. Define a modern color palette and fonts */
+:root {
+    --primary-bg: #1f2937; /* Darker gray */
+    --secondary-bg: #2d3748; /* Medium gray */
+    --header-bg: #111827; /* Very dark gray */
+    --text-light: #f9fafb;
+    --text-dark: #1f2937;
+    --accent-color: #3b82f6; /* A vibrant blue */
+    --border-color: #4b5563;
+    --font-main: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--secondary-bg);
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+/* 2. Modernize the Header */
 .header {
-	padding: 1em;
-	text-align: center;
-	background: #565864;
-	color: white;
-	font-size: 30px;
+    background-color: var(--header-bg);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 4px solid var(--accent-color);
 }
 
-.leftmenu{
-	float: left;
-	width: 10%;
-	height: 100vh;
-	text-align: center;
-	background: #565864;
-	color: white;
-	font-size: 20px;
+/* 3. Use Flexbox for the main layout */
+.app-container {
+    display: flex;
 }
 
-#addPlayer.h4, #addTreasure.h4{
-	align: left;
+.leftmenu {
+    width: 240px; /* Wider for better spacing */
+    background-color: var(--primary-bg);
+    padding: 1.5rem;
+    height: calc(100vh - 80px);
+    border-right: 1px solid var(--border-color);
 }
 
-button{
-	border: 1px solid black;
-	font-weight: bold;
-	background-color: #255890;
+.mainbody {
+    flex-grow: 1;
+    padding: 2.5rem; /* More padding for a cleaner look */
+    background-color: var(--secondary-bg);
 }
 
-#coins{
-	display: flex;
-	flex-direction: row;
+/* 4. Style Buttons with a more streamlined look */
+.btn {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border-radius: 6px;
+    display: block; /* Make buttons block level */
+    width: 100%; /* Full width buttons */
 }
 
-#coin_amount{
-	border: 1px solid black;
-	width: 100px;
+.btn:hover {
+    background-color: #2563eb; /* Darker accent color */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-.mainbody{
-	float: right;
-	width: 85%;
-	color: black;
-	font-size: 16px;
+/* 5. Modernize Tables */
+#trtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    overflow: hidden; /* For rounded corners */
 }
 
-h2.mainbody{
-	width: 80%;
-	text-align: left;
-	color: grey;
-	font-size: 25px;
-	}
-	
-table#trtable {
-	display: block;
+#trtable th, #trtable td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
 }
 
-.save {
-	display: none;
+#trtable th {
+    background-color: var(--header-bg);
+    color: var(--text-light);
+    font-weight: bold;
 }
 
-
-th, td {
-	padding: 5px;
-	width: 100px;
-	height: 20px;
-	border: 1px solid black;
+#trtable tr:last-child td {
+    border-bottom: none;
 }
 
-#playernav{
-	float: right;
-	display: flex;
-	flex-direction: row;
-	border-bottom: 1px solid grey;
-	list-style: none;
+/* 6. Player Navigation */
+#playernav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
 }
 
-.player{
-	padding: 5px;
-	align: right;
+.player {
+    padding: 12px 22px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--text-light);
+    margin-right: 8px;
+    border-radius: 6px 6px 0 0;
+    transition: all 0.3s ease;
+}
+
+.player.active, .player:hover {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* 7. Streamlined Forms */
+form {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #a0aec0; /* Lighter text for labels */
+}
+
+input[type="text"], input[type="number"], input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: #2d3748;
+    color: var(--text-light);
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* 8. Modern Modals */
+.modal-content {
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-title {
+    color: var(--text-light);
+}
+
+.close {
+    color: var(--text-light);
+    opacity: 0.8;
 }
