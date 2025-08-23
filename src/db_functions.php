@@ -1,38 +1,41 @@
 <?php
-$csvMimes =     $csvMimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain');
-
- 
-
+/**
+ * This function is intended for initial, one-time database setup from a CLI script.
+ * It is largely redundant if using the db_config.php script which handles this logic.
+ *
+ * @param mysqli $con The database connection.
+ * @param string $db The name of the database to create.
+ * @return void
+ */
 function makeDb($con, $db){
-    //creates the main database if it is not already created
+    // Creates the main database if it is not already created.
  
-    $db_select = mysqli_select_db($con, $db);
-    $db_create = "CREATE DATABASE ".$db; //create database
-    
-    if(!$db_select) {
+    if (!mysqli_select_db($con, $db)) {
+        // Database could not be selected, so we'll try to create it.
+        // Database names cannot be parameterized, so ensure $db is from a trusted source (e.g., config file).
+        $db_create = "CREATE DATABASE `" . mysqli_real_escape_string($con, $db) . "`";
         
-        /*database could not be selected or is not created so we'll go ahead
-         * and create one and throw an error if we can't*/
-
         if (!mysqli_query($con, $db_create)){
-            echo "<script>alert('Error creating database')</script>";
-            exit(1);
-        }
-        else {
+            error_log('Error creating database ' . $db . ': ' . mysqli_error($con));
+            exit(1); // Exit is appropriate for a setup script.
+        } else {
             echo "Database created successfully. \n";
-            
+            mysqli_select_db($con, $db);
         }
-        
-      }
-    else{
+    } else {
         echo "<p>Database selected!</p>";
     }
-    
-    
 }
 
 /*===== CREATE THE TABLES ============*/
 
+/**
+ * Creates the SQL statement for table creation.
+ *
+ * @param string $tabName The name of the table.
+ * @param array $columns An array of column definitions.
+ * @return string The generated SQL CREATE TABLE statement.
+ */
 function createTableSQL($tabName, $columns){
     
     /*CREATES THE SQL Statement for Table Creation*/
@@ -52,18 +55,32 @@ function createTableSQL($tabName, $columns){
     }
     return $sql;
 }
+/**
+ * Creates a table in the database if it does not already exist.
+ * Intended for use in setup scripts.
+ *
+ * @param mysqli $db_con The database connection.
+ * @param string $tabName The name of the table to create.
+ * @param string $sql The full CREATE TABLE SQL statement.
+ * @return bool True on success, false on failure.
+ */
 function createTable($db_con, $tabName, $sql){
     
-    /*Creates the a table. The table name and sql statement variables are set 
-    outside the function.*/
-    $check_sql = "SHOW TABLES LIKE '".$tabName."'";
+    // Table names are hardcoded in this app, but escaping is good practice.
+    $escapedTabName = mysqli_real_escape_string($db_con, $tabName);
+    $check_sql = "SHOW TABLES LIKE '" . $escapedTabName . "'";
     $result = mysqli_query($db_con, $check_sql);
+
+    if ($result === false) {
+        error_log("Failed to check for table " . $tabName . ": " . mysqli_error($db_con));
+        exit(1); // Exit for setup scripts
+    }
 
     if (mysqli_num_rows($result) == 0){
         //table does not exist. Attempt to create table
         if (!mysqli_query($db_con, $sql)) {
-            echo "<script>alert('Error creating the ".$tabName." table: ".mysqli_error($db_con)."')</script>";
-            exit(1);
+            error_log("Error creating the " . $tabName . " table: " . mysqli_error($db_con));
+            exit(1); // Exit for setup scripts
         }
         else{
             echo "<p>".$tabName." table created successfully!\n</p>";
@@ -71,87 +88,69 @@ function createTable($db_con, $tabName, $sql){
     } else {
         echo "<p>".$tabName." table exists!\n</p>";
     }
-    return;
+    return true;
 }
 
-/*CREATE THE TABLES*/
+/* The following functions define schemas and create tables. They are well-structured for the setup script. */
 
 function playerTable($db_con){
-    //Create the player table. The table is empty until the user adds the data.
-    
-    //Check if the Players Table exists and create it if it does not.
-    
     $tabName = "Players";
-    
-    $columns = array(
-	"id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
-	"playerName VARCHAR (30) NOT NULL",
-	"charName VARCHAR (30)",
-	"class VARCHAR (30)",
-	"race VARCHAR (30)",
-	"level INT(2)");
-    
-     $sql = createTableSQL($tabName, $columns);
-     createTable($db_con, $tabName, $sql);
-     
-     return;
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+        "playerName VARCHAR (30) NOT NULL",
+        "charName VARCHAR (30)",
+        "class VARCHAR (30)",
+        "race VARCHAR (30)",
+        "level INT(2)"
+    ];
+    $sql = createTableSQL($tabName, $columns);
+    createTable($db_con, $tabName, $sql);
 }
 
 function ammoTable($db_con){
-    
-    /* Sets the variables for the Ammunition Table*/
-    
     $tabName = "Ammo";
-    $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
-		"value FLOAT(10,2)",
+        "value FLOAT(10,2)",
         "weight FLOAT(8,2)",
-        "type VARCHAR(20)");
-    
+        "type VARCHAR(20)"
+    ];
     $sql = createTableSQL($tabName, $columns);
     createTable($db_con, $tabName, $sql);
-    
-    return;
 }
 
 function animalsTable($db_con){
-   /*sets the variables for the Animals tables*/
-    
     $tabName = "Animals";
-    $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
         "value FLOAT(10,2)",
         "weight FLOAT(8,2)",
-        "type VARCHAR(20)");
-    
+        "type VARCHAR(20)"
+    ];
     $sql = createTableSQL($tabName, $columns);
     createTable($db_con, $tabName, $sql);
-    
-    return;
 }
 
 function armorTable($db_con){
-    /*sets the variables for the Armor tables*/
-    
     $tabName = "Armor";
-    $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
         "value FLOAT(10,2)",
         "weight FLOAT(8,2)",
         "type VARCHAR(20)",
-        "details VARCHAR(20)");
-    
+        "details VARCHAR(20)"
+    ];
     $sql = createTableSQL($tabName, $columns);
     createTable($db_con, $tabName, $sql);
-    
-    return;
 }
 
 function artifactTable($db_con){
-    /*sets the variables for the Artifact tables*/
-    
     $tabName = "Artifact";
-    $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
         "value FLOAT(10,2)",
         "weight FLOAT(8,2)",
@@ -159,81 +158,62 @@ function artifactTable($db_con){
     
     $sql = createTableSQL($tabName, $columns);
     createTable($db_con, $tabName, $sql);
-    
-    return;
 }
 
 function gearTable($db_con){
-    
-    /*sets the variables for the Gear tables*/
-    
     $tabName = "Gear";
-    $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
         "value FLOAT(10,2)",
         "weight FLOAT(8,2)",
-        "type VARCHAR(20)");
-    
+        "type VARCHAR(20)"
+    ];
     $sql = createTableSQL($tabName, $columns);
     createTable($db_con, $tabName, $sql);
-    
-    return;
 }
 
 function potionsTable($db_con){
-    
-    /*sets the variables for the Oils and Potions tables*/
-    
     $tabName = "Potions";
-    $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
         "value FLOAT(10,2)",
         "weight FLOAT(8,2)",
-        "type VARCHAR(20)");
-    
+        "type VARCHAR(20)"
+    ];
     $sql = createTableSQL($tabName, $columns);
     createTable($db_con, $tabName, $sql);
-    
-    return;
 }
 
 function magicItemsTable($db_con){
-    
-    /*sets the variables for the Magical Items tables*/
-    
     $tabName = "MagicItems";
-    $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
         "value FLOAT(10,2)",
         "weight FLOAT(8,2)",
-        "type VARCHAR(20)");
-    
+        "type VARCHAR(20)"
+    ];
     $sql = createTableSQL($tabName, $columns);
     createTable($db_con, $tabName, $sql);
-    
-    return;
 }
 
 function weaponsTable($db_con){
-    /*sets the variables for the Weapons tables*/
-    
     $tabName = "Weapons";
-    $columns = array("id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
+    $columns = [
+        "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY",
         "itemName VARCHAR (100) NOT NULL",
         "value FLOAT(10,2)",
         "weight FLOAT(8,2)",
         "type VARCHAR(20)",
-        "details VARCHAR(20)");
-    
+        "details VARCHAR(20)"
+    ];
     $sql = createTableSQL($tabName, $columns);
     createTable($db_con, $tabName, $sql);
-    
-    return;
 }
 
 function equipTable($db_con){
-    /*Creates the Equipment table which combines all the other tables into one large dataset*/
-    
     $sql = "CREATE TABLE Equipment AS
     SELECT itemName, value, type from Ammo
     UNION
@@ -252,23 +232,18 @@ function equipTable($db_con){
     SELECT itemName, value, type from Weapons";
     
     createTable($db_con, "Equipment", $sql);
-    return;
 }
 
 function coinsTable($db_con){
-    /* Creates the Table which holds the amount of Gold separated by player*/
-    
     $sql = "CREATE TABLE Coins 
     (playerName VARCHAR(30) NOT NULL,
-    gold FLOAT(10,2))";
+    gold FLOAT(10,2),
+    PRIMARY KEY (playerName))"; // Added primary key for performance and integrity
     
     createTable($db_con, "Coins", $sql);
-    return;
 }
 
 function treasureTable($db_con){
-    /*Creates the Treasure table which is separated by player*/
-    
     $sql = "CREATE TABLE Treasure
     (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     qty INT,
@@ -279,89 +254,74 @@ function treasureTable($db_con){
     sold BOOLEAN DEFAULT 0)";
     
     createTable($db_con, "Treasure", $sql);
-    return;
-    
 }
 
 /* END TABLE CREATION */
 
 /* =========== ADD DATA FILES TO DATABASE FROM CVS FILES ==============*/
-function addData1($db_con, $tabName, $file){
-/*Adds data to the tables that do not have a details column*/
-  
-    //Adds the data to tables with the columns itemName, value, weight, and type
-    $selectSQL = "SELECT 1 FROM ".$tabName." LIMIT 1";
-    $result = mysqli_query($db_con, $selectSQL);
-    $row_cnt = mysqli_num_rows($result);
-    
-    if ($row_cnt !== 0){
-        //Table is Empty
-        echo "<p>".$tabName." is not empty</p>";
+/**
+ * Adds data from a TSV (Tab-Separated Values) file to a table if the table is empty.
+ * Uses prepared statements to prevent SQL injection.
+ *
+ * @param mysqli $db_con The database connection.
+ * @param string $tabName The name of the table to insert into.
+ * @param string $file The path to the TSV file.
+ * @param array $columns The list of column names in the table corresponding to file columns.
+ * @return void
+ */
+function addDataFromCsv($db_con, $tabName, $file, $columns) {
+    $escapedTabName = mysqli_real_escape_string($db_con, $tabName);
+    $result = mysqli_query($db_con, "SELECT 1 FROM `{$escapedTabName}` LIMIT 1");
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        echo "<p>Table `{$tabName}` is not empty. Skipping data import.</p>";
+        return;
     }
+
+    if (!file_exists($file) || !is_readable($file)) {
+        error_log("Data file does not exist or is not readable: {$file}");
+        return;
+    }
+
+    $handle = fopen($file, "r");
+    if (!$handle) {
+        error_log("Could not open data file: {$file}");
+        return;
+    }
+
+    $columnNames = implode(', ', array_map(fn($c) => "`$c`", $columns));
+    $placeholders = implode(', ', array_fill(0, count($columns), '?'));
+    $sqlInsert = "INSERT INTO `{$escapedTabName}` ({$columnNames}) VALUES ({$placeholders})";
+
+    $stmt = $db_con->prepare($sqlInsert);
+    if (!$stmt) {
+        error_log("Error preparing statement for `{$tabName}`: " . $db_con->error);
+        fclose($handle);
+        return;
+    }
+
+    // Assuming all columns from CSV are strings for simplicity in binding.
+    // MySQL will cast them to the correct column types.
+    $types = str_repeat('s', count($columns));
     
-    else{
-        $row = 0;
-        
-        if (!empty($file)){
-            $openFile = fopen($file, "r");
-            
-        
-            while (($column = fgetcsv($openFile, 10000, "\t"))!== FALSE){
-                
-                $row++;
-                if($row == 1) continue;
-                
-                $sqlInsert = "INSERT into ".$tabName. "(itemName, value, weight, type) VALUES ('". $column[0] . "','" . $column[1] . "','" . $column[2] . "','" . $column[3]. "')";
-                
-                if(!mysqli_query($db_con, $sqlInsert)){
-                
-                    echo "<p> Error importing data into ".$tabName."</p>";
-                }
-            }
-           fclose($openFile);
+    // Skip header row
+    fgetcsv($handle, 10000, "\t");
+
+    while (($data = fgetcsv($handle, 10000, "\t")) !== false) {
+        if (count($data) !== count($columns)) {
+            error_log("Row in {$file} has incorrect number of columns. Expected " . count($columns) . ", got " . count($data) . ". Skipping.");
+            continue;
+        }
+        $stmt->bind_param($types, ...$data);
+        if (!$stmt->execute()) {
+            error_log("Error importing data into `{$tabName}`: " . $stmt->error);
         }
     }
-    return;
-  
-}
 
-function addData2($db_con, $tabName, $file){
-    /*Adds data to the tables which includes a details column*/
-    
-    $selectSQL = "SELECT 1 FROM ".$tabName." LIMIT 1";
-    $result = mysqli_query($db_con, $selectSQL);
-    $row_cnt = mysqli_num_rows($result);
-    
-    if ($row_cnt !== 0){
-        
-        echo "<p>".$tabName." is not empty</p>";
-    }
-    else{
-        $row = 0;
-        
-        if (!empty($file)){
-            $openFile = fopen($file, "r");
-            
-            
-            while (($column = fgetcsv($openFile, 10000, "\t"))!== FALSE){
-                
-                $row++;
-                if($row == 1) continue;
-                
-                $sqlInsert = "INSERT into ".$tabName. "(itemName, value, weight, type, details) VALUES ('". $column[0] . "','" . $column[1] . "','" . $column[2] . "','" . $column[3]. "','".$column[4]."')";
-                
-                if(!mysqli_query($db_con, $sqlInsert)){
-                    
-                    echo "<p> Error importing data into ".$tabName."</p>";
-                }
-            }
-            fclose($openFile);
-        }
-    }
-    return;
-    
+    $stmt->close();
+    fclose($handle);
+    echo "<p>Data imported into `{$tabName}`.</p>";
 }
-
 
 /*===== ADD DATA FROM USER INPUT ===============*/
 
@@ -379,6 +339,12 @@ function addPlayerData($db_con, $playerName, $charName, $charClass, $charRace, $
 
         // Player does not exist, insert new record
         $stmt = $db_con->prepare("INSERT INTO Players (playerName, charName, class, race, level) VALUES (?, ?, ?, ?, ?)");
+        // Handle nulls for non-required fields
+        $charName = empty($charName) ? null : $charName;
+        $charClass = empty($charClass) ? null : $charClass;
+        $charRace = empty($charRace) ? null : $charRace;
+        $charLvl = empty($charLvl) ? null : (int)$charLvl;
+
         $stmt->bind_param("ssssi", $playerName, $charName, $charClass, $charRace, $charLvl);
 
         if (!$stmt->execute()) {
@@ -386,28 +352,28 @@ function addPlayerData($db_con, $playerName, $charName, $charClass, $charRace, $
         }
     }
     $stmt->close();
-    return;
 }
 
 function addPlayertoCoins($db_con, $playerName){
-    
-    /*Adds Player to the Coins table from the Add Player form*/
-    
-    $selectSql = "SELECT * FROM Coins WHERE playerName = '".$playerName. "'";
-    $result = mysqli_query($db_con, $selectSql);
-    $row_cnt = mysqli_num_rows($result);
-    
-    if (!($row_cnt !== 0)){
-        
-        $insertPlayerSql = "INSERT INTO Coins (playerName, gold) VALUES ('".$playerName."', 0)";
-        
-        if (!(mysqli_query($db_con, $insertPlayerSql))){
-            echo "Error. Could not add records.\n";
-        }
-    }
-    return;
-}
+    /*Adds a player to the Coins table if they don't already exist.*/
 
+    // Using INSERT ... ON DUPLICATE KEY UPDATE is more efficient than SELECT then INSERT.
+    // This requires a UNIQUE key or PRIMARY KEY on playerName, which was added to coinsTable().
+    $stmt = $db_con->prepare("INSERT INTO Coins (playerName, gold) VALUES (?, 0) ON DUPLICATE KEY UPDATE playerName=playerName");
+    if (!$stmt) {
+        error_log("Prepare failed (insert coins): " . $db_con->error);
+        return false;
+    }
+    $stmt->bind_param("s", $playerName);
+    
+    if (!$stmt->execute()){
+        error_log("Error adding player to Coins table: " . $stmt->error);
+        $stmt->close();
+        return false;
+    }
+    $stmt->close();
+    return true;
+}
 
 function addTreasure($db_con, $qty, $itemName, $playerName, $broken){
     /*Adds data to the Treasure Table from the Add Treasure form*/
@@ -424,18 +390,18 @@ function addTreasure($db_con, $qty, $itemName, $playerName, $broken){
     $stmt->execute();
     $result = $stmt->get_result();
     if ($row = $result->fetch_assoc()) {
-        $val = $row['value'];
+        $val = (float)$row['value'];
     }
     $stmt->close();
 
-    // 2. Check if the player already has this item
+    // 2. Check if the player already has this item (and it's not broken differently)
     $old_qty = 0;
-    $stmt = $db_con->prepare("SELECT qty FROM Treasure WHERE itemName = ? AND playerName = ?");
+    $stmt = $db_con->prepare("SELECT qty FROM Treasure WHERE itemName = ? AND playerName = ? AND broken = ?");
     if ($stmt === false) {
         error_log("Prepare failed: " . $db_con->error);
         return;
     }
-    $stmt->bind_param("ss", $itemName, $playerName);
+    $stmt->bind_param("ssi", $itemName, $playerName, $broken);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($row = $result->fetch_assoc()) {
@@ -443,14 +409,14 @@ function addTreasure($db_con, $qty, $itemName, $playerName, $broken){
     }
     $stmt->close();
 
-    // 3. If they do, update the quantity. If not, insert a new record.
+    // 3. If they have an identical item (same name, same broken status), update the quantity.
+    //    Otherwise, insert a new record.
     if ($old_qty > 0){
         $newqty = $old_qty + $qty;
         $newval = $val * $newqty;
         
-        $stmt = $db_con->prepare("UPDATE Treasure SET qty=?, value=? WHERE itemName = ? AND playerName = ?");
-        // Assuming qty is integer, value is double, itemName is string, playerName is string
-        $stmt->bind_param("idss", $newqty, $newval, $itemName, $playerName);
+        $stmt = $db_con->prepare("UPDATE Treasure SET qty=?, value=? WHERE itemName = ? AND playerName = ? AND broken = ?");
+        $stmt->bind_param("idssi", $newqty, $newval, $itemName, $playerName, $broken);
         if (!$stmt->execute()) {
             // It's better to log errors than echo them, especially for AJAX calls.
             error_log("Error updating treasure: " . $stmt->error);
@@ -461,7 +427,6 @@ function addTreasure($db_con, $qty, $itemName, $playerName, $broken){
         $newval = $val * $qty;
                 
         $stmt = $db_con->prepare("INSERT INTO Treasure (qty, itemName, value, playerName, broken) VALUES (?, ?, ?, ?, ?)");
-        // Assuming qty is int, itemName string, value double, playerName string, broken int(0/1)
         $stmt->bind_param("isdsi", $qty, $itemName, $newval, $playerName, $broken);
        
         if (!$stmt->execute()){
@@ -469,45 +434,64 @@ function addTreasure($db_con, $qty, $itemName, $playerName, $broken){
         }
         $stmt->close();
     }
-
-return;
 }
 
 /*============ End User Input Functions =============== */
 
-function selectData($db_con, $column, $table, $condition, $key){
-    /*Function to select data from mysql table and display it on page.
-     * $column = the column you want to display
-     * $table = the table you want to choose from
-     * $condition = the column you for the conditional check
-     * $key = the condition you want to check for
-     */
+/**
+ * Securely selects data from a database table.
+ *
+ * @param mysqli $db_con The database connection.
+ * @param array|string $columns The column(s) to select. Use '*' for all.
+ * @param string $table The table to select from.
+ * @param string|null $condition The column for the WHERE clause.
+ * @param string|null $key The value for the WHERE clause.
+ * @return mysqli_result|false The result object on success, or false on failure.
+ */
+function selectData($db_con, $columns, $table, $condition = null, $key = null){
+    // A whitelist of allowed tables is crucial to prevent SQL injection on table names.
+    $allowed_tables = ['Players', 'Coins', 'Treasure', 'Equipment'];
+    if (!in_array($table, $allowed_tables)) {
+        error_log("Disallowed table access attempt: " . $table);
+        return false;
+    }
+
+    // For columns, prevent injection by removing backticks and wrapping in them.
+    // A better approach is to whitelist columns per table.
+    if (is_array($columns)) {
+        $select_cols = implode(', ', array_map(fn($col) => "`" . str_replace("`", "", $col) . "`", $columns));
+    } else {
+        $select_cols = ($columns === '*') ? '*' : "`" . str_replace("`", "", $columns) . "`";
+    }
+
+    $sql = "SELECT {$select_cols} FROM `{$table}`";
     
-    if(empty($condition)){
-        $sql = "SELECT ".$column." FROM ".$table;
+    if (!empty($condition)) {
+        // Also validate the condition column name
+        $condition_col = "`" . str_replace("`", "", $condition) . "`";
+        $sql .= " WHERE {$condition_col} = ?";
+        
+        $stmt = $db_con->prepare($sql);
+        if (!$stmt) {
+            error_log("Prepare failed for selectData: " . $db_con->error . " (SQL: $sql)");
+            return false;
+        }
+        $stmt->bind_param("s", $key);
+        if (!$stmt->execute()) {
+            error_log("Execute failed for selectData: " . $stmt->error);
+            return false;
+        }
+        $query = $stmt->get_result();
+
+    } else {
+        $query = mysqli_query($db_con, $sql);
     }
     
-    else {
-        $sql = "SELECT ".$column." FROM ".$table." WHERE ".$condition. " = '".$key. "'";
+    if (!$query) {
+        error_log("Database query failed: " . mysqli_error($db_con));
+        return false;
     }
-    
-    $query= mysqli_query($db_con, $sql) or die("Cannot connect to database");
     
     return $query;
-    
 }
-
-/*function searchDatabase($db_con, $sql, $column){
-    /*Function for the Typeahead portion of Add Treasure Form */
-    
-   /* $query=mysqli_query($db_con, $sql) or die("Cannot connect to database");
-    
-    while($row=mysqli_fetch_assoc($query))
-    {
-        $array[] = $row[$column];
-    }
-    echo json_encode($array);
-    
-}*/
-
 ?>

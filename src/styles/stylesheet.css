@@ -2,20 +2,20 @@
 
 /* 1. Define a modern color palette and fonts */
 :root {
-    --primary-bg: #1f2937; /* Darker gray */
-    --secondary-bg: #2d3748; /* Medium gray */
-    --header-bg: #111827; /* Very dark gray */
-    --text-light: #f9fafb;
-    --text-dark: #1f2937;
-    --accent-color: #3b82f6; /* A vibrant blue */
-    --border-color: #4b5563;
+    --primary-bg: #F5F5DC; /* Light Beige */
+    --secondary-bg: #556B2F; /* Green */
+    --header-bg: #A0522D; /* Red-Brown */
+    --text-light: #F5F5DC; /* Light Beige Text */
+    --text-dark: #362419; /* Dark Brown Text */
+    --accent-color: #D4AF37; /* Gold */
+    --border-color: #8B4513; /* Dark Brown */
     --font-main: 'Roboto', sans-serif;
 }
 
 body {
     font-family: var(--font-main);
-    background-color: var(--secondary-bg);
-    color: var(--text-light);
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
     font-size: 16px;
 }
 
@@ -26,6 +26,7 @@ body {
     padding: 1rem 2rem;
     text-align: center;
     font-size: 2rem;
+    position: relative; /* Added for positioning child elements */
     border-bottom: 4px solid var(--accent-color);
 }
 
@@ -36,22 +37,27 @@ body {
 
 .leftmenu {
     width: 240px; /* Wider for better spacing */
-    background-color: var(--primary-bg);
+    min-width: 200px; /* Prevent it from becoming too small */
+    max-width: 40vw;
+    background-color: var(--secondary-bg); /* Green sidebar */
+    color: var(--text-light); /* Light text for dark sidebar */
     padding: 1.5rem;
     height: calc(100vh - 80px);
     border-right: 1px solid var(--border-color);
+    resize: horizontal;
+    overflow: auto;
 }
 
 .mainbody {
     flex-grow: 1;
     padding: 2.5rem; /* More padding for a cleaner look */
-    background-color: var(--secondary-bg);
+    background-color: var(--primary-bg);
 }
 
 /* 4. Style Buttons with a more streamlined look */
 .btn {
     background-color: var(--accent-color);
-    color: var(--text-light);
+    color: var(--text-dark);
     border: none;
     padding: 12px 20px;
     margin-bottom: 1rem;
@@ -64,7 +70,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #2563eb; /* Darker accent color */
+    background-color: #B8860B; /* Darker gold */
     transform: translateY(-2px); /* Subtle lift effect */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -108,7 +114,7 @@ body {
     padding: 12px 22px;
     cursor: pointer;
     background-color: transparent;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-right: 8px;
     border-radius: 6px 6px 0 0;
     transition: all 0.3s ease;
@@ -116,7 +122,7 @@ body {
 
 .player.active, .player:hover {
     background-color: var(--accent-color);
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 /* 7. Streamlined Forms */
@@ -128,7 +134,7 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
-    color: #a0aec0; /* Lighter text for labels */
+    color: #6d4c41; /* Mid-brown for labels */
 }
 
 input[type="text"], input[type="number"], input[type="checkbox"] {
@@ -137,8 +143,8 @@ input[type="text"], input[type="number"], input[type="checkbox"] {
     margin-bottom: 1rem;
     border-radius: 6px;
     border: 1px solid var(--border-color);
-    background-color: #2d3748;
-    color: var(--text-light);
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
     transition: border-color 0.3s ease;
 }
 
@@ -159,10 +165,54 @@ input[type="text"]:focus, input[type="number"]:focus {
 }
 
 .modal-title {
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .close {
-    color: var(--text-light);
+    color: var(--text-dark);
     opacity: 0.8;
+}
+
+/* 9. Gold Display in Header */
+#gold-container {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+    min-width: 150px;
+}
+
+#gold-container h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    text-align: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+    padding-bottom: 0.5rem;
+}
+
+#gold-container table {
+    margin: 0;
+    width: 100%; /* Take up full width of container */
+    border: none;
+    background-color: transparent;
+}
+
+#gold-container th,
+#gold-container td {
+    padding: 2px 4px; /* More compact padding */
+    border: none;
+    color: var(--text-light);
+    background-color: transparent;
+    text-align: left;
+}
+
+#gold-container td {
+    text-align: right;
+    font-weight: bold;
 }

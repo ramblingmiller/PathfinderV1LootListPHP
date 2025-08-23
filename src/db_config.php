@@ -81,17 +81,19 @@ $seed_files = [
     "Weapons"    => $dataDir . "weapons.csv",
 ];
 
-// Import data for tables with (itemName, value, weight, type)
-addData1($conn, "Ammo", $seed_files['Ammo']);
-addData1($conn, "Animals", $seed_files['Animals']);
-addData1($conn, "Artifact", $seed_files['Artifact']);
-addData1($conn, "Gear", $seed_files['Gear']);
-addData1($conn, "MagicItems", $seed_files['MagicItems']);
-addData1($conn, "Potions", $seed_files['Potions']);
+0.3
+// Import data using the new consolidated and secure function
+$columns_basic = ['itemName', 'value', 'weight', 'type'];
+$columns_detailed = ['itemName', 'value', 'weight', 'type', 'details'];
 
-// Import data for tables with an extra 'details' column
-addData2($conn, "Armor", $seed_files['Armor']);
-addData2($conn, "Weapons", $seed_files['Weapons']);
+addDataFromCsv($conn, "Ammo", $seed_files['Ammo'], $columns_basic);
+addDataFromCsv($conn, "Animals", $seed_files['Animals'], $columns_basic);
+addDataFromCsv($conn, "Artifact", $seed_files['Artifact'], $columns_basic);
+addDataFromCsv($conn, "Gear", $seed_files['Gear'], $columns_basic);
+addDataFromCsv($conn, "MagicItems", $seed_files['MagicItems'], $columns_basic);
+addDataFromCsv($conn, "Potions", $seed_files['Potions'], $columns_basic);
+addDataFromCsv($conn, "Armor", $seed_files['Armor'], $columns_detailed);
+addDataFromCsv($conn, "Weapons", $seed_files['Weapons'], $columns_detailed);
 echo "Data import finished.\n";
 
 
