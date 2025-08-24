@@ -22,12 +22,50 @@ class Player
     {
         $this->db_con = $db_con;
     }
+    public function __construct($db_con)
+    {
+        $this->db_con = $db_con;
+    }
 
-    
+    /**
+     * Retrieves all players from the database, ordered by name.
+     *
+     * @return array An array of all player records.
+     */
+    public function getPlayers(): array
+    {
+        $result = $this->db_con->query("SELECT * FROM `Players` ORDER BY `playerName` ASC");
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    /**
+     * Searches for players by name using a LIKE query.
+     *
+     * @param string $term The search term.
+     * @return array An array of matching player records.
+     */
+    public function searchByName(string $term): array
+    {
+        $searchTerm = $term . '%';
+        $stmt = $this->db_con->prepare(
+            "SELECT `playerName` FROM `Players` WHERE `playerName` LIKE ? ORDER BY `playerName` ASC LIMIT 10"
+        );
+        $stmt->bind_param("s", $searchTerm);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 
     /**
      * Adds a new player to the database.
      *
+     * @param string $playerName The name of the player.
+     * @param string|null $charName The character's name.
+     * @param string|null $charClass The character's class.
+     * @param string|null $charRace The character's race.
+     * @param int|null $charLvl The character's level.
+     * @return void
+     */
      * This method inserts a new record into the `Players` table and
      * initializes their gold in the `Coins` table. It checks to prevent
      * duplicate entries in both tables.
