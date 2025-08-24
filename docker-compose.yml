@@ -6,7 +6,7 @@ services:
     ports:
       - "8081:80"
     volumes:
-      - ./src:/var/www/html
+      - ./:/var/www/html
     depends_on:
       db:
         condition: service_healthy
@@ -17,7 +17,7 @@ services:
       - DB_NAME=pathfinder_loot
     command: >
       /bin/bash -c "
-        until php /var/www/html/db_config.php; do
+        until php /var/www/html/src/config/db_config.php; do
           echo 'db_config.php failed, retrying in 5 seconds...';
           sleep 5;
         done;
